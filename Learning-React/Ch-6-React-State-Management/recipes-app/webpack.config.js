@@ -1,6 +1,3 @@
-
-Raw Blame
-
 var path = require("path");
 
 module.exports = {
