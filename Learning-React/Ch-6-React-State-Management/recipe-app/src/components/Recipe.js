@@ -7,11 +7,17 @@ export default function Recipe(
   ingredients = [],
   steps = [],
 ) {
+  const tname = typeof name;
+  if (tname !== 'string') {
+    console.log("The type of name is not string, it is " + tname);
+    console.log(name);
+  }
+
   return (
-    <section id={name.toLowerCase().replace(/ /g, "-")}>
-      <h1>{name}</h1>
-      <IngredientsList list={ingredients} />
-      <Ingredient title="Cooking Instructions" steps={steps} />
+    <section id={name.toString().toLowerCase().replace(/ /g, "-")}>
+      <h1>{name.name.toString()}</h1>
+      <IngredientsList list={name.ingredients} />
+      <Ingredient title="Cooking Instructions" steps={name.steps} />
     </section>
   );
 }

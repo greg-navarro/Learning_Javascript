@@ -4,6 +4,7 @@ import Menu from "./components/Menu";
 import data from "./data/recipes.json";
 
 function App() {
+  console.log(data);
   return (
     <div className="App">
       <header className="App-header">
