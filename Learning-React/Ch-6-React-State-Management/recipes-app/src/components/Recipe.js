@@ -1,6 +1,6 @@
 import React from "react";
 import IngredientsList from "./IngredientsList";
-import Instructions from "./Instructions";
+import Ingredient from "./Ingredient";
 
 export default function Recipe(
   name = "untitled",
@@ -11,7 +11,7 @@ export default function Recipe(
     <section id={name.toLowerCase().replace(/ /g, "-")}>
       <h1>{name}</h1>
       <IngredientsList list={ingredients} />
-      <Instructions title="Cooking Instructions" steps={steps} />
+      <Ingredient title="Cooking Instructions" steps={steps} />
     </section>
   );
 }
