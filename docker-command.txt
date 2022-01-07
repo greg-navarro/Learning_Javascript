@@ -1,3 +1,7 @@
 // run npx with a newer version of node than I have on this machine
 docker run -p 3000:3000 -w /Ch-6-React-State-Management -v "$(pwd):/Ch-6-React-State-Management" node:latest \
  sh -c "npx create-react-app recipe-app"
+
+
+
+ docker run -p 3000:3000 -w /Ch-6-React-State-Management -v "$(pwd):/Ch-6-React-State-Management" node:latest  sh -c "cd recipe-app && npm start"

@@ -3,10 +3,14 @@ import Ingredient from "./Ingredient";
 
 export default function IngredientsList({ list = [] }) {
   return (
-    <ul className="ingredients">
-      {list.map((ingredient, i) => (
-        <Ingredient key={i} {...ingredient} />
-      ))}
-    </ul>
+    <>
+
+      <ul className="ingredients">
+        {list.map((ingredient, i) => (
+          <Ingredient key={i} {...ingredient} />
+        ))}
+      </ul>
+      <h4></h4>
+    </>
   );
 }
