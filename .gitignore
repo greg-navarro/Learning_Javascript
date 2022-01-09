@@ -2,3 +2,5 @@
 
 **/node_modules
 Learning-React/Ch-6-React-State-Management/recipes-app/node_modules/ajv/lib/dotjs/_limit.js
+*.ico
+*.png

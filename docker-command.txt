@@ -3,5 +3,12 @@ docker run -p 3000:3000 -w /Ch-6-React-State-Management -v "$(pwd):/Ch-6-React-S
  sh -c "npx create-react-app recipe-app"
 
 
-
+// use latest version of node to start the react project in a container, available at port 3000
+// we have mounted the container to /Ch-6-React-State-Management directory
  docker run -p 3000:3000 -w /Ch-6-React-State-Management -v "$(pwd):/Ch-6-React-State-Management" node:latest  sh -c "cd recipe-app && npm start"
+
+ docker run -p 3000:3000 -w /Sleep-Sounds-Player -v "$(pwd):/Sleep-Sounds-Player" node:latest \
+ sh -c "npx create-react-app sleep-sounds-app"
+
+ docker run -p 3000:3000 -w /Ch-6-React-State-Management -v "$(pwd):/Ch-6-React-State-Management" node:latest \
+ sh -c "npx create-react-app examples-app"
