@@ -1,11 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-import StarRating from './components/StarRating';
+import ColorList from './components/ColorList';
+import data from './components/color-data.json';
+import { useState } from 'react';
+
 
 function App() {
+  const [colors, setColors] = useState(data);
+
   return (
     <div className="App">
-      <StarRating />
+      <ColorList
+        colors={colors}
+        onRemoveColor={id => {
+          const newColors = colors.filter(color => color.id !== id);
+          setColors(newColors);
+        }}
+      />
     </div>
   );
 }
