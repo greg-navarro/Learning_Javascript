@@ -2,6 +2,7 @@ import './App.css';
 import ColorList from './components/ColorList';
 import data from './components/color-data.json';
 import { useState } from 'react';
+import AddColorForm from './components/AddColorForm';
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
 
   return (
     <div className="App">
+      <AddColorForm onNewColor={(title, color) => alert(`TODO: Create ${title} - ${color}`)} />
       <ColorList
         colors={colors}
         onRemoveColor={id => {
