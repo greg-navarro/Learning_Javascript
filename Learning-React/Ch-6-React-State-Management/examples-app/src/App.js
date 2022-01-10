@@ -3,14 +3,28 @@ import ColorList from './components/ColorList';
 import data from './components/color-data.json';
 import { useState } from 'react';
 import AddColorForm from './components/AddColorForm';
+import { v4 } from "uuid";
 
 
 function App() {
   const [colors, setColors] = useState(data);
 
+  const createColor = (title, color) => {
+    const newColors = [
+      ...colors,
+      {
+        id: v4(),
+        rating: 0,
+        title,
+        color
+      }
+    ];
+    setColors(newColors);
+  };
+
   return (
     <div className="App">
-      <AddColorForm onNewColor={(title, color) => alert(`TODO: Create ${title} - ${color}`)} />
+      <AddColorForm onNewColor={createColor} />
       <ColorList
         colors={colors}
         onRemoveColor={id => {

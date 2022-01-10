@@ -7,7 +7,7 @@ export default function AddColorForm({ onNewColor = f => f }) {
   const submit = e => {
     e.preventDefault();
     onNewColor(title, color);
-    setTitle("");
+    setTitle("");  // FIXME how can we switch back to the default???
     setColor("#000000");
   }
 
